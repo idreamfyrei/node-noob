@@ -1,2 +1,6 @@
 1745741280413 GET /: New req received
 1745741280485 GET /favicon.ico: New req received
+1745743001787 GET /user: New req received
+1745743001865 GET /favicon.ico: New req received
+1745743005477 GET /user: New req received
+1745743005523 GET /favicon.ico: New req received

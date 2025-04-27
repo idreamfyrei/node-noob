@@ -1,37 +1,21 @@
-// import {add,sub} from "./math.js";
-import * as math from "./math.js";
+import express from "express";
+import dotenv from "dotenv";
 
-//For 1st type of import
-// console.log(add(1, 2));
-// console.log(sub(1, 2));
+const app = express();
+dotenv.config();
 
-//for second import
-console.log(math.add(1, 2));
-console.log(math.sub(1, 2));
+const port = 3000;
 
-//----------------------
-
-/*
-* Http Server
-*/ 
-
-// ! Create a log file to register every hit on server and log it. The operation is asynchronous
-
-import http from "http";
-import fs from "fs";
-
-const server = http.createServer((req, res) => {
-    const log = `${Date.now()} ${req.method} ${req.url}: New req received`;
-    fs.appendFile("log.txt", log + "\n", (err) => {
-        if (err) {
-            console.log(err);
-        }
-    res.end("Hello World");
-    })
+app.get("/", (req, res) => {
+    res.send("Hello World!");
 });
 
-server.listen(3000, () => {
-    console.log("Listening on port 3000");
-})
+app.get("/user", (req, res) => {
+    res.send(`hello ! ${req.query.name}`);
+});
 
-//---------------------------------------------------------
+
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);   
+})
