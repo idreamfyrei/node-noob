@@ -1,20 +1,10 @@
 {
   "name": "backend-nodejs",
-  "module": "index.js",
-  "type": "module",
   "private": true,
-  "scripts": {
-    "start": "bun --watch index.js"
-  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10"
   }
 }

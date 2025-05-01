@@ -1,5 +1,5 @@
 // import {add,sub} from "./math.js";
-import * as math from "./math.js";
+import * as math from "../math.js";
 
 //For 1st type of import
 // console.log(add(1, 2));
@@ -15,7 +15,7 @@ console.log(math.sub(1, 2));
  * Http Server
  */
 
-// ! Create a log file to register every hit on server and log it. The operation is asynchronous
+//* Create a log file to register every hit on server and log it. The operation is asynchronous
 
 import http from "http";
 import fs from "fs";
