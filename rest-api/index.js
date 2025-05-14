@@ -8,6 +8,7 @@ const PORT = 8000;
 //* Middleware
 // get the data from POST request, creates a JS object of it, and attach it to req.body
 app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //* ROUTES
 // return user in the form of HTML
